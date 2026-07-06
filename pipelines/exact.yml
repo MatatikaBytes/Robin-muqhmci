@@ -1,8 +1,11 @@
 version: pipelines/v0.1
 label: Exact
+schedule: '@daily'
 timeout: 0
 max_retries: 0
 data_components:
 - tap-exact
 - Warehouse
 - dbt
+triggered_by:
+- deploy
